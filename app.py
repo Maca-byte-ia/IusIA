@@ -16,6 +16,8 @@ with open("juicios_reales_demo.json", "r", encoding="utf-8") as f:
 # --- Sidebar ---
 st.sidebar.title("Menú")
 seccion = st.sidebar.radio("Selecciona una sección:", [
+    "Interpretar Artículo",
+    "Simulador de Juicio",
     "Consulta Código Penal",
     "Modo Estudio",
     "Subir Archivos",
