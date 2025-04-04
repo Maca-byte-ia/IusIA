@@ -1,0 +1,18 @@
+[
+    {
+        "tipo": "Homicidio",
+        "resultado": "Condenado",
+        "tribunal": "TS",
+        "año": 2021,
+        "resumen": "El acusado fue declarado culpable de homicidio...",
+        "abogado": "Juan Pérez"
+    },
+    {
+        "tipo": "Patria potestad",
+        "resultado": "A favor del demandante",
+        "tribunal": "AP Madrid",
+        "año": 2022,
+        "resumen": "Se otorga la custodia exclusiva a la madre...",
+        "abogado": "Laura García"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Título I",
+        "capitulo": "Capítulo I",
+        "articulo": "Artículo 138",
+        "texto": "El que matare a otro será castigado..."
+    },
+    {
+        "titulo": "Título I",
+        "capitulo": "Capítulo II",
+        "articulo": "Artículo 139",
+        "texto": "Será castigado con la pena de prisión de..."
+    },
+    {
+        "titulo": "Título I",
+        "capitulo": "Capítulo III",
+        "articulo": "Artículo 140",
+        "texto": "El asesinato será castigado con prisión permanente..."
+    }
+]
