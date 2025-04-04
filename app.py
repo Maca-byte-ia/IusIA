@@ -21,7 +21,7 @@ seccion = st.sidebar.radio("Selecciona una sección:", [
     "Subir Archivos",
     "Investigación de Juicios"
 ])
- --- Interpretación de Artículos ---
+# --- Interpretación de Artículos ---
 if seccion == "Interpretar Artículo":
     st.title("Interpretación de Artículo Legal")
     articulo = st.text_input("Introduce el número del artículo (ej: 138):")
