@@ -21,6 +21,44 @@ seccion = st.sidebar.radio("Selecciona una sección:", [
     "Subir Archivos",
     "Investigación de Juicios"
 ])
+ --- Interpretación de Artículos ---
+if seccion == "Interpretar Artículo":
+    st.title("Interpretación de Artículo Legal")
+    articulo = st.text_input("Introduce el número del artículo (ej: 138):")
+    if articulo:
+        encontrados = [a for a in codigo_penal if articulo in a["articulo"]]
+        if encontrados:
+            for art in encontrados:
+                st.subheader(f"{art['articulo']} – {art['capitulo']}")
+                st.write(art["texto"])
+                st.info("Interpretación simulada: Este artículo trata sobre un delito grave tipificado con consecuencias penales significativas.")
+        else:
+            st.warning("Artículo no encontrado en la base de datos.")
+
+# --- Simulador de Juicio ---
+elif seccion == "Simulador de Juicio":
+    st.title("Simulador de Juicio")
+    caso = st.text_area("Describe brevemente el caso (hechos, argumentos, pruebas):")
+    nivel = st.radio("Nivel de simulación", ["Rápido", "Detallado"])
+    if st.button("Simular"):
+        if nivel == "Rápido":
+            resultado = "Fallo simulado: El tribunal desestima la demanda por falta de pruebas directas."
+        else:
+            resultado = (
+                "Fallo simulado (detalle):\n"
+                "- Argumento del demandante: {}\n"
+                "- Contraparte: La defensa presentó jurisprudencia contradictoria.\n"
+                "- Juez (IA): En base al art. 138 y sentencias recientes, se estima parcialmente.\n"
+                "- Recomendación: Reforzar pruebas documentales y testigos."
+            ).format(caso[:200])
+        st.markdown("**Resultado de la Simulación:**")
+        st.text(resultado)
+
+        st.markdown("---")
+        st.subheader("Informe generado")
+        fecha = datetime.date.today()
+        informe = f"---\nIA Legal – Informe de Simulación ({fecha})\n\nCaso:\n{caso}\n\nResultado:\n{resultado}\n"
+        st.download_button("Descargar Informe (.txt)", informe, file_name="informe_legal.txt")
 
 # --- Consulta Código Penal ---
 if seccion == "Consulta Código Penal":
